@@ -1,4 +1,14 @@
 .footer {
     height: 1.5rem;
-    background-color: #f0f0f0;
+    background-color: #343f49;
+    position: relative;
+
+    p {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        text-align: right;
+        color: white;
+        margin: 0 2rem;
+    }
 }

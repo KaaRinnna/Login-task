@@ -2,5 +2,25 @@
     width: 24rem;
     height: 26rem;
     border-radius: 1rem;
-    background-color: #f0f0f0;
+    background-color: white;
+
+    h1 {
+        margin: 2rem;
+        text-align: start;
+        color: #5a7475;
+    }
+}
+
+.form {
+    margin: 0 2rem;
+    width: 20rem;
+
+    input {
+        height: 3rem;
+        width: 100%;
+        display: block;
+        max-width: 20rem;
+        border: 2px solid #5a7475;
+        margin-bottom: 3rem;
+    }
 }
