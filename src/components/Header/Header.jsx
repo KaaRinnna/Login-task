@@ -13,7 +13,7 @@ export const Header = () => {
                     <a href='#'>About</a>
                 </nav>
             </div>
-            <div>
+            <div className={styles.right}>
                 <Button mode='primary'>Login</Button>
             </div>
         </header>
