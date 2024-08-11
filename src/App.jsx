@@ -13,9 +13,9 @@ function App() {
       <div className="grid-item div5"/>
 
       <div className='inner'>
-        <Header/>
+        <Header />
         <div className='content'>
-          <Form/>
+          <Form />
         </div>
         <Footer/>
       </div>
