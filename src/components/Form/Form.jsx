@@ -2,12 +2,9 @@ import { useState } from 'react';
 import { Button } from '../Button/Button';
 import styles from './Form.module.css';
 
-export const Form = () => {
+export const Form = ({setImage}) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-
-    const [image, setImage] = useState("")
-    
 
     const onSubmit = (event) => {
         event.preventDefault();
@@ -24,9 +21,14 @@ export const Form = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            setImage(data.image);
+            alert('User logged in!')
+            setImage(data.image)
         });
-    }
+    };
+
+    const onCancel = () => {
+        window.location.reload(true);
+    };
 
     return (
         <div className={styles.container}>
@@ -41,7 +43,7 @@ export const Form = () => {
                     <input type="password" id="password" name="password" onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <div className={styles.btn}>
-                    <Button mode='base'>Cancel</Button>
+                    <Button type="button" onClick={onCancel} mode='base'>Cancel</Button>
                     <Button type="submit" className={styles.btn} mode='primary'>Login</Button>
                 </div>
             </form>

@@ -1,9 +1,12 @@
 import './App.css';
+import { useState } from 'react';
 import { Footer } from './components/Footer/Footer';
 import { Form } from './components/Form/Form';
 import { Header } from './components/Header/Header';
 
 function App() {
+  const [image, setImage] = useState("");
+
   return (
     <div className='background'>
       <div className="grid-item div1"/>
@@ -13,9 +16,9 @@ function App() {
       <div className="grid-item div5"/>
 
       <div className='inner'>
-        <Header />
+        <Header image={image} />
         <div className='content'>
-          <Form />
+          <Form setImage={setImage} />
         </div>
         <Footer/>
       </div>
