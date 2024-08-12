@@ -6,6 +6,11 @@ import { Header } from './components/Header/Header';
 
 function App() {
   const [image, setImage] = useState("");
+  const [formVisible, setFormVisible] = useState(true);
+
+  const onHandleLogin = () => {
+    setFormVisible(true);
+  }
 
   return (
     <div className='background'>
@@ -16,9 +21,10 @@ function App() {
       <div className="grid-item div5"/>
 
       <div className='inner'>
-        <Header image={image} />
+        <Header image={image} onLogin={onHandleLogin} />
         <div className='content'>
-          <Form setImage={setImage} />
+          {formVisible && <Form setImage={setImage} setFormVisible={setFormVisible} />}
+          
         </div>
         <Footer/>
       </div>

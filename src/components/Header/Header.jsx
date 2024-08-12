@@ -4,7 +4,7 @@ import { Button } from '../Button/Button';
 import dots from '../../assets/three-dots.svg';
 import { useState } from 'react';
 
-export const Header = ({image}) => {
+export const Header = ({image, onLogin}) => {
     const [menuVisible, setMenuVisible] = useState(false);
 
     const toggleMenu = () => {
@@ -15,18 +15,17 @@ export const Header = ({image}) => {
         <header className={styles.header}>
             <div className={styles.left}>
                 <img src={image || icon} />
-                <nav className={`${styles.nav} ${menuVisible ? styles.menuNav : ''}`}>
-                    <a className={styles.selected} href='#'>Home</a>
-                    <a href='#'>Contact</a>
-                    <a href='#'>About</a>
-                </nav>
             </div>
-            <div className={`${styles.right} ${menuVisible ? styles.menuNav : ''}`}>
-                <Button mode='primary'>Login</Button>
-            </div>
+            <nav className={`${styles.nav} ${menuVisible ? styles.menuNav : ''}`}>
+                <a className={styles.selected} href='#'>Home</a>
+                <a href='#'>Contact</a>
+                <a href='#'>About</a>
+                <Button onClick={onLogin} mode='primary'>Login</Button>
+            </nav>
+             
             <div className={styles.menu}>
                 <img onClick={toggleMenu} src={dots}/>
-            </div>
+            </div>     
         </header>
     )
 }

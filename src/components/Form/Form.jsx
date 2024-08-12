@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from '../Button/Button';
 import styles from './Form.module.css';
 
-export const Form = ({setImage}) => {
+export const Form = ({setImage, setFormVisible}) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
@@ -21,8 +21,9 @@ export const Form = ({setImage}) => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            alert('User logged in!')
-            setImage(data.image)
+            alert('User logged in!');
+            setImage(data.image);
+            setFormVisible(false);
         });
     };
 
@@ -48,5 +49,6 @@ export const Form = ({setImage}) => {
                 </div>
             </form>
         </div>
+        
     )
 }
