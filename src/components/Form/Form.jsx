@@ -8,7 +8,6 @@ export const Form = ({setImage, setFormVisible}) => {
 
     const onSubmit = (event) => {
         event.preventDefault();
-        
         fetch('https://dummyjson.com/auth/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -20,7 +19,6 @@ export const Form = ({setImage, setFormVisible}) => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             alert('User logged in!');
             setImage(data.image);
             setFormVisible(false);
@@ -28,7 +26,7 @@ export const Form = ({setImage, setFormVisible}) => {
     };
 
     const onCancel = () => {
-        window.location.reload(true);
+        setFormVisible(false)
     };
 
     return (

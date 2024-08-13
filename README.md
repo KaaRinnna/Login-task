@@ -1,8 +1,21 @@
-# React + Vite
+# Quantori test task
+Responsive Login layout with dummy json integration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## How to run the project
+You must have:
+- [Node.js](https://nodejs.org/)
+- npm or yarn(https://yarnpkg.com/)
 
-Currently, two official plugins are available:
+1. Clone the repository
+```git clone https://github.com/KaaRinnna/Login-task.git```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Navigate to the root directory:
+
+3. Install the dependencies
+```npm install``` or ```yarn install```
+
+4. Run the project
+```npm run dev``` or ```yarn dev```
+
+5. Open the browser to go to this page:
+http://localhost:5173
